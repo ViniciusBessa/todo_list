@@ -1,0 +1,31 @@
+.theme-light {
+  --background-color1: #FFFFFF;
+  --background-color2: #e7dfdf;
+  --primary-color: #FFFFFF;
+  --secondary-color: yellow;
+  --font-color: #212529;
+}
+
+.theme-dark {
+  --background-color1: #36205a;
+  --background-color2: #4e2296;
+  --primary-color: #212529;
+  --secondary-color: white;
+  --font-color: #f8f9fa;
+}
+
+.background {
+  background-image: linear-gradient(to right, var(--background-color1), var(--background-color2));
+}
+
+.primary-color {
+  background-color: var(--primary-color);
+}
+
+.secondary-color {
+  background-color: var(--secondary-color);
+}
+
+.font-color {
+  color: var(--font-color);
+}

@@ -1,17 +1,12 @@
+import React from 'react';
 import './App.css';
-import Tarefa from './Tarefa/Tarefa';
+import './Global.css';
+import Main from './Main/Main';
 
 function App() {
-  if (!localStorage.tarefas) {
-    localStorage.tarefas = [];
-  }
-
-  const tarefas = localStorage.tarefas;
-  let textos = ['Eae\nEaee', 'eae']
-
   return (
-    <div className="App-flex">
-      {textos.map((texto, index) => <Tarefa key={index} titulo={`Título: ${texto}`} texto={texto}/>)}
+    <div className='App App-flex background'>
+      <Main/>
     </div>
   );
 }
