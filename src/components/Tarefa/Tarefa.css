@@ -1,0 +1,50 @@
+/* Celulares */
+@media only screen and (max-width: 600px) {
+  .tarefa {
+    border: 1px solid blue;
+    width: 85vw;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px 10px;
+    word-wrap: break-word;
+  }
+    
+  .texto {
+    min-height: 200px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) {
+  .tarefa {
+    border: 1px solid blue;
+    width: 500px;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px 10px;
+    word-wrap: break-word;
+  }
+    
+  .texto {
+    min-height: 300px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
+
+/* Desktops */
+@media only screen and (min-width: 992px) {
+  .tarefa {
+    border: 1px solid blue;
+    width: 600px;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px 10px;
+    word-wrap: break-word;
+  }
+    
+  .texto {
+    min-height: 300px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
