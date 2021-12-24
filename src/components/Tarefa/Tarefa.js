@@ -12,7 +12,7 @@ function Tarefa (props) {
   return (
     <div className="tarefa primary-color">
       {props.texto}
-      <button onClick={() => excluirTarefa()}>Aperta</button>
+      <button className="botao-excluir" onClick={() => excluirTarefa()}>X</button>
     </div>
   );
 }

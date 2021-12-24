@@ -26,6 +26,7 @@
   background-color: var(--secondary-color);
 }
 
-.font-color {
+.font {
   color: var(--font-color);
+  font-size: 1.2em;
 }

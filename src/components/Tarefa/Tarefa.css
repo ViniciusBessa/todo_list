@@ -1,10 +1,11 @@
 /* Celulares */
 @media only screen and (max-width: 600px) {
   .tarefa {
+    display: flex;
     border: 1px solid var(--secondary-color);
     width: 80%;
     margin-bottom: 10px;
-    padding: 15px 10px 15px 10px;
+    padding: 10px;
     white-space: pre-wrap;
     word-wrap: break-word;
   }
@@ -13,10 +14,11 @@
 /* Tablets */
 @media only screen and (min-width: 600px) {
   .tarefa {
+    display: flex;
     border: 1px solid var(--secondary-color);
     width: 300px;
     margin-bottom: 10px;
-    padding: 15px 10px 15px 10px;
+    padding: 10px;
     white-space: pre-wrap;
     word-wrap: break-word;
   }
@@ -25,11 +27,19 @@
 /* Desktops */
 @media only screen and (min-width: 992px) {
   .tarefa {
+    display: flex;
     border: 1px solid var(--secondary-color);
     width: 400px;
     margin-bottom: 10px;
-    padding: 15px 10px 15px 10px;
+    padding: 5px 10px 5px 10px;
     white-space: pre-wrap;
     word-wrap: break-word;
   }
+}
+
+.botao-excluir {
+  margin-left: auto;
+  background-color: red;
+  width: 20%;
+  border: none;
 }

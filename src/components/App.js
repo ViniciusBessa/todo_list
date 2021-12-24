@@ -5,7 +5,7 @@ import Main from './Main/Main';
 
 function App() {
   return (
-    <div className='App App-flex background font-color'>
+    <div className='App App-flex background font'>
       <h1>TODO List</h1>
       <Main/>
     </div>
