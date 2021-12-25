@@ -1,6 +1,6 @@
 .main-flex {
   width: 80%;
-  min-height: 90vh;
+  min-height: 80vh;
   text-align: start;
   display: flex;
   flex-direction: column;

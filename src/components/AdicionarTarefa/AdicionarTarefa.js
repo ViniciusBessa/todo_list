@@ -1,13 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
+import "./AdicionarTarefa.css"
 
 function Tarefa (props) {
   const [showJanela, setShowJanela] = useState('none');
-  const refJanela = useRef(null);
+  const refTitulo = useRef(null);
   const refInput = useRef(null);
-
-  useEffect(() => {
-    refJanela.current.focus();
-  }, [showJanela])
 
   function adicionarTarefa () {
     let novasTarefas = JSON.parse(localStorage.tarefas);
@@ -15,19 +12,26 @@ function Tarefa (props) {
 
     if (valorInput !== '' && valorInput.trim() !== '') {
       novasTarefas.unshift((valorInput.trim()));
-      localStorage.tarefas = JSON.stringify(novasTarefas);
-      props.setTarefas(JSON.parse(localStorage.tarefas));
+      props.setTarefas(novasTarefas);
     }
   }
 
   return (
     <div style={{marginBottom: 20}}>
-      <div onMouseOutCapture={() => setShowJanela('none')} ref={refJanela} style={{display: showJanela}}>
-        <input ref={refInput}/>
-      </div>
+      <div className="container-adicionar" onMouseLeave={() => setShowJanela('none')} style={{display: showJanela}}>
+        <button className="botao-fechar-janela" onClick={() => setShowJanela('none')}>X</button>
 
-      <button onClick={() => setShowJanela('block')}>Mostrar Janela</button>
-      <button onClick={() => adicionarTarefa()}>Adicionar nova tarefa</button>
+        <div>
+          <h3>Título</h3>
+          <input maxLength={20} type={'text'} ref={refTitulo}/>
+        </div>
+        <div>
+          <h3>Texto</h3>
+          <textarea className="vertical-resizing" ref={refInput}></textarea>
+        </div>
+        <button style={{alignSelf: 'flex-end'}} onClick={() => adicionarTarefa()}>Adicionar nova tarefa</button>
+      </div>
+      <button onClick={() => setShowJanela('flex')}>Mostrar Janela</button>
     </div>
   );
 }
