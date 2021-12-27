@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import "./AddTask.css"
 
-function Tarefa (props) {
-  const [showJanela, setShowJanela] = useState('none');
+function AddTask (props) {
+  const [showJanela, setShowJanela] = useState(false);
   const refTitulo = useRef(null);
   const refTexto = useRef(null);
 
@@ -13,34 +13,37 @@ function Tarefa (props) {
 
     if (texto !== '' && titulo !== '') {
       novasTarefas.unshift({titulo: titulo.trim(), texto: texto.trim()});
-      setShowJanela('none')
+      setShowJanela(false)
       props.setTarefas(novasTarefas);
     }
   }
 
-  function FecharJanela () {
+  function fecharJanela () {
     refTitulo.current.value = '';
     refTexto.current.value = '';
-    setShowJanela('none');
+    setShowJanela(false);
   }
 
   return (
     <div className="container">
-      <div className="window" onMouseLeave={() => FecharJanela()} style={{display: showJanela}}>
-        <button className="window__btn-close" onClick={() => FecharJanela()}>X</button>
-        <div>
-          <h3>Título</h3>
-          <input maxLength={20} type={'text'} ref={refTitulo}/>
+      {showJanela && (
+        <div className="window" onMouseLeave={() => fecharJanela()}>
+          <button className="window__btn-close" onClick={() => fecharJanela()}>X</button>
+          <div className="window__div">
+            <h3>Título</h3>
+            <input maxLength={20} type={'text'} ref={refTitulo}/>
+          </div>
+          <div className="window__div">
+            <h3>Texto</h3>
+            <textarea className="vertical-resize" ref={refTexto}></textarea>
+          </div>
+          <button style={{alignSelf: 'flex-end'}} onClick={() => adicionarTarefa()}>Adicionar nova tarefa</button>
         </div>
-        <div>
-          <h3>Texto</h3>
-          <textarea className="vertical-resize" ref={refTexto}></textarea>
-        </div>
-        <button style={{alignSelf: 'flex-end'}} onClick={() => adicionarTarefa()}>Adicionar nova tarefa</button>
-      </div>
-      <button onClick={() => setShowJanela('flex')}>Adicionar uma nova tarefa</button>
+      )}
+
+      <button onClick={() => setShowJanela(true)}>Adicionar uma nova tarefa</button>
     </div>
   );
 }
 
-export default Tarefa;
+export default AddTask;

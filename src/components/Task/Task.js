@@ -1,7 +1,7 @@
 import React from "react";
 import './Task.css';
 
-function Tarefa (props) {
+function Task (props) {
   function excluirTarefa () {
     let novasTarefas = JSON.parse(localStorage.tarefas);
     novasTarefas = novasTarefas.filter((texto, index) => index !== props.index);
@@ -10,10 +10,10 @@ function Tarefa (props) {
 
   return (
     <div className="task primary-color">
-      {props.titulo}
+      {props.tarefa.titulo}
       <button className="task__btn-delete" onClick={() => excluirTarefa()}>X</button>
     </div>
   );
 }
 
-export default Tarefa;
+export default Task;

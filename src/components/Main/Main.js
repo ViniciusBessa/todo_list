@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Main.css";
-import Tarefa from "../Task/Task";
-import AdicionarTarefa from "../AddTask/AddTask"
+import Task from "../Task/Task";
+import AddTask from "../AddTask/AddTask"
 
 function Main () {
   const [tarefas, setTarefas] = useState(JSON.parse(localStorage.tarefas) || []);
@@ -13,9 +13,9 @@ function Main () {
   return (
     <main className="main-flex">
       <h1>TODO List</h1>
-      <AdicionarTarefa setTarefas={setTarefas}/>
+      <AddTask setTarefas={setTarefas}/>
       {tarefas.map((tarefa, index) => 
-      <Tarefa setTarefas={setTarefas} index={index} key={index} titulo={tarefa.titulo} texto={tarefa.texto}/>)
+      <Task setTarefas={setTarefas} index={index} key={index} tarefa={tarefa}/>)
       }  
     </main>
   );
