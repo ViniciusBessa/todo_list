@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import "./AdicionarTarefa.css"
+import "./AddTask.css"
 
 function Tarefa (props) {
   const [showJanela, setShowJanela] = useState('none');
@@ -25,16 +25,16 @@ function Tarefa (props) {
   }
 
   return (
-    <div className="container-adicionar">
-      <div className="janela-adicionar-tarefa" onMouseLeave={() => FecharJanela()} style={{display: showJanela}}>
-        <button className="botao-fechar-janela" onClick={() => FecharJanela()}>X</button>
+    <div className="container">
+      <div className="window" onMouseLeave={() => FecharJanela()} style={{display: showJanela}}>
+        <button className="window__btn-close" onClick={() => FecharJanela()}>X</button>
         <div>
           <h3>Título</h3>
           <input maxLength={20} type={'text'} ref={refTitulo}/>
         </div>
         <div>
           <h3>Texto</h3>
-          <textarea className="vertical-resizing" ref={refTexto}></textarea>
+          <textarea className="vertical-resize" ref={refTexto}></textarea>
         </div>
         <button style={{alignSelf: 'flex-end'}} onClick={() => adicionarTarefa()}>Adicionar nova tarefa</button>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import './Tarefa.css';
+import './Task.css';
 
 function Tarefa (props) {
   function excluirTarefa () {
@@ -9,9 +9,9 @@ function Tarefa (props) {
   }
 
   return (
-    <div className="tarefa primary-color">
+    <div className="task primary-color">
       {props.titulo}
-      <button className="botao-excluir" onClick={() => excluirTarefa()}>X</button>
+      <button className="task__btn-delete" onClick={() => excluirTarefa()}>X</button>
     </div>
   );
 }

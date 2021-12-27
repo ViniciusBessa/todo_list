@@ -1,6 +1,6 @@
 /* Celulares */
 @media only screen and (max-width: 600px) {
-  .tarefa {
+  .task {
     display: flex;
     border: 1px solid white;
     width: 80%;
@@ -13,7 +13,7 @@
 
 /* Tablets */
 @media only screen and (min-width: 600px) {
-  .tarefa {
+  .task {
     display: flex;
     border: 1px solid white;
     width: 400px;
@@ -26,7 +26,7 @@
 
 /* Desktops */
 @media only screen and (min-width: 992px) {
-  .tarefa {
+  .task {
     display: flex;
     border: 1px solid white;
     width: 450px;
@@ -37,7 +37,7 @@
   }
 }
 
-.botao-excluir {
+.task__btn-delete {
   margin-left: auto;
   color: red;
   background-color: transparent;
@@ -45,7 +45,7 @@
   border: none;
 }
 
-.botao-excluir:hover {
+.task__btn-delete:hover {
   margin-left: auto;
   color: white;
   background-color: red;

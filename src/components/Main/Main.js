@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Main.css";
-import Tarefa from "../Tarefa/Tarefa";
-import AdicionarTarefa from "../AdicionarTarefa/AdicionarTarefa"
-import { useEffect } from "react/cjs/react.development";
+import Tarefa from "../Task/Task";
+import AdicionarTarefa from "../AddTask/AddTask"
 
 function Main () {
   const [tarefas, setTarefas] = useState(JSON.parse(localStorage.tarefas) || []);

@@ -1,6 +1,12 @@
+.container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 /* Celulares */
 @media only screen and (max-width: 600px) {
-  .janela-adicionar-tarefa {
+  .window {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,7 +23,7 @@
 
 /* Tablets */
 @media only screen and (min-width: 600px) {
-  .janela-adicionar-tarefa {
+  .window {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -34,7 +40,7 @@
 
 /* Desktops */
 @media only screen and (min-width: 992px) {
-  .janela-adicionar-tarefa {
+  .window {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -49,17 +55,11 @@
   }
 }
 
-.container-adicionar {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.vertical-resizing {
+.vertical-resize {
   resize: vertical;
 }
 
-.botao-fechar-janela {
+.window__btn-close {
   position: absolute; 
   top: 0; 
   right: 0;
@@ -70,7 +70,7 @@
   height: 40px;
 }
 
-.botao-fechar-janela:hover {
+.window__btn-close:hover {
   position: absolute; 
   top: 0; 
   right: 0;
