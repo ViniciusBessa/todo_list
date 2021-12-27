@@ -1,17 +1,58 @@
+/* Celulares */
+@media only screen and (max-width: 600px) {
+  .janela-adicionar-tarefa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 215px;
+    min-height: 200px;
+    gap: 20px;
+  
+    position: absolute;
+    background-color: #212529;
+    padding: 20px;
+    border: 2px solid orange;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) {
+  .janela-adicionar-tarefa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 415px;
+    min-height: 200px;
+    gap: 20px;
+  
+    position: absolute;
+    background-color: #212529;
+    padding: 20px;
+    border: 2px solid orange;
+  }
+}
+
+/* Desktops */
+@media only screen and (min-width: 992px) {
+  .janela-adicionar-tarefa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 415px;
+    min-height: 200px;
+    gap: 20px;
+  
+    position: absolute;
+    background-color: #212529;
+    padding: 20px;
+    border: 2px solid orange;
+  }
+}
+
 .container-adicionar {
+  margin-bottom: 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  max-width: 415px;
-  gap: 20px;
-
-  position: absolute;
-  top: 45%;
-  left: 30%;
-
-  background-color: #212529;
-  padding: 20px;
-  border: 2px solid orange;
 }
 
 .vertical-resizing {
@@ -22,8 +63,20 @@
   position: absolute; 
   top: 0; 
   right: 0;
+  color: red;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.botao-fechar-janela:hover {
+  position: absolute; 
+  top: 0; 
+  right: 0;
+  color: white;
   background-color: red;
   border: none;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }

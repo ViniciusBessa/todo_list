@@ -13,10 +13,10 @@ function Main () {
 
   return (
     <main className="main-flex">
+      <h1>TODO List</h1>
       <AdicionarTarefa setTarefas={setTarefas}/>
-
-      {tarefas.map((texto, index) => 
-      <Tarefa setTarefas={setTarefas} index={index} key={index} texto={texto}/>)
+      {tarefas.map((tarefa, index) => 
+      <Tarefa setTarefas={setTarefas} index={index} key={index} titulo={tarefa.titulo} texto={tarefa.texto}/>)
       }  
     </main>
   );

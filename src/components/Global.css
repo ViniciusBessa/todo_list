@@ -1,32 +1,16 @@
-.theme-light {
-  --background-color1: #FFFFFF;
-  --background-color2: #e7dfdf;
-  --primary-color: #FFFFFF;
-  --secondary-color: yellow;
-  --font-color: #212529;
-}
-
-.theme-dark {
-  --background-color1: #36205a;
-  --background-color2: #4e2296;
-  --primary-color: #212529;
-  --secondary-color: white;
-  --font-color: #f8f9fa;
-}
-
 .background {
-  background-image: linear-gradient(to right, var(--background-color1), var(--background-color2));
+  background-image: linear-gradient(to right, #36205a, #4e2296);
 }
 
 .primary-color {
-  background-color: var(--primary-color);
+  background-color: #212529;
 }
 
 .secondary-color {
-  background-color: var(--secondary-color);
+  background-color: white;
 }
 
 .font {
-  color: var(--font-color);
+  color: #f8f9fa;
   font-size: 1.2em;
 }
