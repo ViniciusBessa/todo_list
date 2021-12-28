@@ -23,7 +23,7 @@ function Task (props) {
     <div className="task primary-color" onClick={() => mudarShowDescricao()}>
       <span className="task__title">{props.tarefa.titulo}</span> 
       <button className="task__btn-delete" onClick={() => excluirTarefa()}>X</button>
-      {showDescricao && <span>{props.tarefa.descricao}</span>}
+      {showDescricao && <div className="task__description">{props.tarefa.descricao}</div>}
     </div>
   );
 }

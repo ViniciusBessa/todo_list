@@ -3,13 +3,12 @@
   .task {
     display: grid;
     row-gap: 15px;
+    grid-template-columns: 50% 50%;
 
     border: 1px solid white;
     width: 80%;
     margin-bottom: 10px;
     padding: 10px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
   }
 }
 
@@ -18,13 +17,12 @@
   .task {
     display: grid;
     row-gap: 20px;
+    grid-template-columns: 50% 50%;
 
     border: 1px solid white;
-    width: 400px;
+    width: 500px;
     margin-bottom: 10px;
     padding: 10px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
   }
 }
 
@@ -33,13 +31,12 @@
   .task {
     display: grid;
     row-gap: 20px;
+    grid-template-columns: 50% 50%;
 
     border: 1px solid white;
-    width: 450px;
+    width: 550px;
     margin-bottom: 10px;
     padding: 10px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
   }
 }
 
@@ -47,11 +44,15 @@
   font-size: 1.1em;
 }
 
+.task__description {
+  grid-column: span 2;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 .task__btn-delete {
-  grid-column-start: 2;
-  grid-column-end: 2;
   margin-left: auto;
-  color: red;
+  color: #ff4545;
   background-color: transparent;
   width: 25%;
   border: none;
@@ -59,5 +60,5 @@
 
 .task__btn-delete:hover {
   color: white;
-  background-color: red;
+  background-color: #ff4545;
 }

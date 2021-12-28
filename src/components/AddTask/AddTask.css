@@ -78,7 +78,7 @@
   position: absolute; 
   top: 0; 
   right: 0;
-  color: red;
+  color: #ff4545;
   background-color: transparent;
   border: none;
   width: 40px;
@@ -87,7 +87,7 @@
 
 .window__btn-close:hover {
   color: white;
-  background-color: red;
+  background-color: #ff4545;
 }
 
 .vertical-resize {
