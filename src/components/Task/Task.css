@@ -1,7 +1,9 @@
 /* Celulares */
 @media only screen and (max-width: 600px) {
   .task {
-    display: flex;
+    display: grid;
+    row-gap: 15px;
+
     border: 1px solid white;
     width: 80%;
     margin-bottom: 10px;
@@ -14,7 +16,9 @@
 /* Tablets */
 @media only screen and (min-width: 600px) {
   .task {
-    display: flex;
+    display: grid;
+    row-gap: 20px;
+
     border: 1px solid white;
     width: 400px;
     margin-bottom: 10px;
@@ -27,7 +31,9 @@
 /* Desktops */
 @media only screen and (min-width: 992px) {
   .task {
-    display: flex;
+    display: grid;
+    row-gap: 20px;
+
     border: 1px solid white;
     width: 450px;
     margin-bottom: 10px;
@@ -37,18 +43,21 @@
   }
 }
 
+.task__title {
+  font-size: 1.1em;
+}
+
 .task__btn-delete {
+  grid-column-start: 2;
+  grid-column-end: 2;
   margin-left: auto;
   color: red;
   background-color: transparent;
-  width: 10%;
+  width: 25%;
   border: none;
 }
 
 .task__btn-delete:hover {
-  margin-left: auto;
   color: white;
   background-color: red;
-  width: 10%;
-  border: none;
 }
