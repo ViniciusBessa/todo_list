@@ -41,7 +41,7 @@ function AddTask (props) {
         </div>
       )}
 
-      <button onClick={() => setShowJanela(true)}>Adicionar uma tarefa</button>
+      <button className="window__btn-open" onClick={() => setShowJanela(true)}>Adicionar uma tarefa</button>
     </div>
   );
 }
