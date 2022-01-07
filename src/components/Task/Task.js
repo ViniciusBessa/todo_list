@@ -6,7 +6,7 @@ function Task (props) {
 
   function excluirTarefa () {
     let novasTarefas = JSON.parse(localStorage.tarefas);
-    novasTarefas = novasTarefas.filter((descricao, index) => index !== props.index);
+    novasTarefas.splice(props.index, 1);
     props.setTarefas(novasTarefas);
   }
 

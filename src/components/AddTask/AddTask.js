@@ -13,7 +13,7 @@ function AddTask (props) {
 
     if (descricao !== '' && titulo !== '') {
       novasTarefas.unshift({titulo: titulo.trim(), descricao: descricao.trim()});
-      setShowJanela(false)
+      fecharJanela();
       props.setTarefas(novasTarefas);
     }
   }
