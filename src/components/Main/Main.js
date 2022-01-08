@@ -11,7 +11,7 @@ function Main () {
   }, [tarefas])
 
   return (
-    <main className="main-flex">
+    <main className="main-flex background">
       <h1>TODO List</h1>
       <AddTask setTarefas={setTarefas}/>
       {tarefas.map((tarefa, index) => 
