@@ -4,55 +4,17 @@
   margin-bottom: 20px;
 }
 
-/* Celulares */
-@media only screen and (max-width: 600px) {
-  .window {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.window {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 
-    max-width: 215px;
-    min-height: 200px;  
-    position: absolute;
-    background-color: #212529;
-    padding: 20px;
-    border: 2px solid orange;
-  }
-}
-
-/* Tablets */
-@media only screen and (min-width: 600px) {
-  .window {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-
-    max-width: 415px;
-    min-height: 200px;    
-    position: absolute;
-    background-color: #212529;
-    padding: 20px;
-    border: 2px solid orange;
-  }
-}
-
-/* Desktops */
-@media only screen and (min-width: 992px) {
-  .window {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-
-    max-width: 415px;
-    min-height: 200px;
-    position: absolute;
-    background-color: #212529;
-    padding: 20px;
-    border: 2px solid orange;
-  }
+  min-height: 200px;
+  position: absolute;
+  background-color: #212529;
+  padding: 20px;
+  border: 2px solid orange;
 }
 
 .window__div {
@@ -106,4 +68,25 @@
 
 .vertical-resize {
   resize: vertical;
+}
+
+/* Celulares */
+@media only screen and (max-width: 600px) {
+  .window {
+    max-width: 215px;  
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) {
+  .window {
+    max-width: 415px;    
+  }
+}
+
+/* Desktops */
+@media only screen and (min-width: 992px) {
+  .window {
+    max-width: 500px;
+  }
 }

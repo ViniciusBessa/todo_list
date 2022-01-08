@@ -1,43 +1,11 @@
-/* Celulares */
-@media only screen and (max-width: 600px) {
-  .task {
-    display: grid;
-    row-gap: 15px;
-    grid-template-columns: 80% 20%;
+.task {
+  display: grid;
+  grid-template-columns: 80% 20%;
 
-    border: 1px solid white;
-    width: 80%;
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-}
-
-/* Tablets */
-@media only screen and (min-width: 600px) {
-  .task {
-    display: grid;
-    row-gap: 20px;
-    grid-template-columns: 80% 20%;
-
-    border: 1px solid white;
-    width: 500px;
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-}
-
-/* Desktops */
-@media only screen and (min-width: 992px) {
-  .task {
-    display: grid;
-    row-gap: 20px;
-    grid-template-columns: 80% 20%;
-
-    border: 1px solid white;
-    width: 550px;
-    margin-bottom: 10px;
-    padding: 10px;
-  }
+  border: 1px solid white;
+  width: 80%;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
 .task__title {
@@ -62,4 +30,28 @@
 .task__btn-delete:hover {
   color: white;
   background-color: #ff4545;
+}
+
+/* Celulares */
+@media only screen and (max-width: 600px) {
+  .task {
+    row-gap: 15px;
+    width: 80%;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) {
+  .task {
+    row-gap: 20px;
+    width: 500px;
+  }
+}
+
+/* Desktops */
+@media only screen and (min-width: 992px) {
+  .task {
+    row-gap: 20px;
+    width: 600px;
+  }
 }
