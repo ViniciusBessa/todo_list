@@ -31,7 +31,7 @@ function AddTask (props) {
           <button className="window__btn-close" onClick={() => fecharJanela()}>X</button>
           <div className="window__div">
             <h3>Título</h3>
-            <input maxLength={20} type={'text'} ref={refTitulo}/>
+            <input maxLength={18} type={'text'} ref={refTitulo}/>
           </div>
           <div className="window__div">
             <h3>Descrição</h3>
